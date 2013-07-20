@@ -28,7 +28,7 @@
 	<body>
 		<div id="table-contents">
 			<div class="toctree-wrapper compound">
-			<function <lambda> at 0x5bc7de8>
+			<function <lambda> at 0x480e8c0>
 			</div>
 		</div>
 
@@ -477,7 +477,7 @@ Only entries in <tt class="docutils literal"><span class="pre">$autoload['librar
 </li>
 <li><a class="reference internal" href="general/routing.html"><em>URI Routing</em></a> changes include:<ul>
 <li>Added possibility to route requests using callbacks.</li>
-<li>Added possibility to use dashes in the controller and method URI segments (translated to underscores).</li>
+<li>Added a new reserved route (<em>translate_uri_dashes</em>) to allow usage of dashes in the controller and method URI segments.</li>
 <li>Deprecated methods <tt class="docutils literal"><span class="pre">fetch_directory()</span></tt>, <tt class="docutils literal"><span class="pre">fetch_class()</span></tt> and <tt class="docutils literal"><span class="pre">fetch_method()</span></tt> in favor of their respective public properties.</li>
 </ul>
 </li>
@@ -548,7 +548,7 @@ Only entries in <tt class="docutils literal"><span class="pre">$autoload['librar
 <li>Fixed a bug (#23, #1238) - delete_all() in the <cite>Database Caching Library &lt;database/caching&gt;</cite> used to delete .htaccess and index.html files, which is a potential security risk.</li>
 <li>Fixed a bug in <a class="reference internal" href="libraries/trackback.html"><em>Trackback Library</em></a> method validate_url() where it didn&#8217;t actually do anything, due to input not being passed by reference.</li>
 <li>Fixed a bug (#11, #183, #863) - CI_Form_validation::_execute() silently continued to the next rule, if a rule method/function is not found.</li>
-<li>Fixed a bug (#122) Where routed uri string was being reported incorrectly in sub-directories.</li>
+<li>Fixed a bug (#122) - routed URI string was being reported incorrectly in sub-directories.</li>
 <li>Fixed a bug (#1242) - read_dir() in the <a class="reference internal" href="libraries/zip.html"><em>Zip Library</em></a> wasn&#8217;t compatible with Windows.</li>
 <li>Fixed a bug (#306) - ODBC driver didn&#8217;t have an _insert_batch() method, which resulted in fatal error being triggered when insert_batch() is used with it.</li>
 <li>Fixed a bug in MSSQL and SQLSrv&#8217;s _truncate() where the TABLE keyword was missing.</li>
