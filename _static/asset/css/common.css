@@ -350,6 +350,11 @@ fieldset{ border: 0; }
 }
 
 @media screen and (-webkit-min-device-pixel-ratio:0){
-	/* Safari 5+ only override */
-    ::i-block-chrome,#header input[type="submit"]{ padding-bottom: 7px; }
+    #header input[type="submit"]{
+    	padding-bottom: 7px;
+    	/* Chrome Only Hack */
+    	(-bracket-:hack;
+	        padding-bottom: 4px;
+	    );
+    }
 }
